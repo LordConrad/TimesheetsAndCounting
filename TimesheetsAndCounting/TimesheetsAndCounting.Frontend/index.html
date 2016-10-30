@@ -2,7 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Кадры и бухгалтерия</title>
-
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
     <link rel="stylesheet" href="content/css/main.css" />
     <link rel="stylesheet" href="content/css/material-fonts/material-fonts.css" />
     <link rel="stylesheet" href="scripts/angular-material/angular-material.css" />
@@ -56,29 +58,77 @@
                 <md-tab label="Табель">
                     <md-content class="md-padding">
                         <md-table-container>
-                            <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
-                                <thead md-head md-order="query.order" md-on-reorder="getTimesheet">
+                            <table md-table md-progress="promise">
+                                <thead md-head md-on-reorder="getTimesheets">
                                     <tr md-row>
-                                        <th md-column><span>Dessert (100g serving)</span></th>
-                                        <th md-column md-numeric><span>Calories</span></th>
-                                        <th md-column md-numeric>Fat (g)</th>
-                                        <th md-column md-numeric>Carbs (g)</th>
-                                        <th md-column md-numeric>Protein (g)</th>
-                                        <th md-column md-numeric>Sodium (mg)</th>
-                                        <th md-column md-numeric>Calcium (%)</th>
-                                        <th md-column md-numeric>Iron (%)</th>
+                                        <th md-column><span>Имя</span></th>
+                                        <th md-column md-numeric>1</th>
+                                        <th md-column md-numeric>2</th>
+                                        <th md-column md-numeric>3</th>
+                                        <th md-column md-numeric>4</th>
+                                        <th md-column md-numeric>5</th>
+                                        <th md-column md-numeric>6</th>
+                                        <th md-column md-numeric>7</th>
+                                        <th md-column md-numeric>8</th>
+                                        <th md-column md-numeric>9</th>
+                                        <th md-column md-numeric>10</th>
+                                        <th md-column md-numeric>11</th>
+                                        <th md-column md-numeric>12</th>
+                                        <th md-column md-numeric>13</th>
+                                        <th md-column md-numeric>14</th>
+                                        <th md-column md-numeric>15</th>
+                                        <th md-column md-numeric>16</th>
+                                        <th md-column md-numeric>17</th>
+                                        <th md-column md-numeric>18</th>
+                                        <th md-column md-numeric>19</th>
+                                        <th md-column md-numeric>20</th>
+                                        <th md-column md-numeric>21</th>
+                                        <th md-column md-numeric>22</th>
+                                        <th md-column md-numeric>23</th>
+                                        <th md-column md-numeric>24</th>
+                                        <th md-column md-numeric>25</th>
+                                        <th md-column md-numeric>26</th>
+                                        <th md-column md-numeric>27</th>
+                                        <th md-column md-numeric>28</th>
+                                        <th md-column md-numeric>29</th>
+                                        <th md-column md-numeric>30</th>
+                                        <th md-column md-numeric>31</th>
                                     </tr>
                                 </thead>
                                 <tbody md-body>
-                                    <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="dessert in desserts.data">
-                                        <td md-cell>{{dessert.name}}</td>
-                                        <td md-cell>{{dessert.calories.value}}</td>
-                                        <td md-cell>{{dessert.fat.value | number: 1}}</td>
-                                        <td md-cell>{{dessert.carbs.value}}</td>
-                                        <td md-cell>{{dessert.protein.value | number: 1}}</td>
-                                        <td md-cell>{{dessert.sodium.value}}</td>
-                                        <td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
-                                        <td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>
+                                    <tr md-row ng-repeat="timesheet in timesheets.data">
+                                        <td md-cell>{{timesheet.name}}</td>
+                                        <td md-cell>{{timesheet.day1}}</td>
+                                        <td md-cell>{{timesheet.day2}}</td>
+                                        <td md-cell>{{timesheet.day3}}</td>
+                                        <td md-cell>{{timesheet.day4}}</td>
+                                        <td md-cell>{{timesheet.day5}}</td>
+                                        <td md-cell>{{timesheet.day6}}</td>
+                                        <td md-cell>{{timesheet.day7}}</td>
+                                        <td md-cell>{{timesheet.day8}}</td>
+                                        <td md-cell>{{timesheet.day9}}</td>
+                                        <td md-cell>{{timesheet.day10}}</td>
+                                        <td md-cell>{{timesheet.day11}}</td>
+                                        <td md-cell>{{timesheet.day12}}</td>
+                                        <td md-cell>{{timesheet.day13}}</td>
+                                        <td md-cell>{{timesheet.day14}}</td>
+                                        <td md-cell>{{timesheet.day15}}</td>
+                                        <td md-cell>{{timesheet.day16}}</td>
+                                        <td md-cell>{{timesheet.day17}}</td>
+                                        <td md-cell>{{timesheet.day18}}</td>
+                                        <td md-cell>{{timesheet.day19}}</td>
+                                        <td md-cell>{{timesheet.day20}}</td>
+                                        <td md-cell>{{timesheet.day21}}</td>
+                                        <td md-cell>{{timesheet.day22}}</td>
+                                        <td md-cell>{{timesheet.day23}}</td>
+                                        <td md-cell>{{timesheet.day24}}</td>
+                                        <td md-cell>{{timesheet.day25}}</td>
+                                        <td md-cell>{{timesheet.day26}}</td>
+                                        <td md-cell>{{timesheet.day27}}</td>
+                                        <td md-cell>{{timesheet.day28}}</td>
+                                        <td md-cell>{{timesheet.day29}}</td>
+                                        <td md-cell>{{timesheet.day30}}</td>
+                                        <td md-cell>{{timesheet.day31}}</td>
                                     </tr>
                                 </tbody>
                             </table>
