@@ -121,7 +121,9 @@
     <Content Include="scripts\angular\angular-animate.min.js.map" />
     <Content Include="scripts\angular\angular.min.js.map" />
     <Content Include="packages.config" />
-    <Content Include="scripts\app\controllers\timesheet.json" />
+    <Content Include="scripts\app\controllers\timesheetOptionsController.js" />
+    <Content Include="scripts\app\templates\timesheet\timesheetOptions.html" />
+    <Content Include="timesheet.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -64,7 +64,7 @@
                                         <th md-column><span>Имя</span></th>
                                         <th md-column md-numeric>1</th>
                                         <th md-column md-numeric>2</th>
-                                        <th md-column md-numeric>3</th>
+                                        <th md-column md-numeric >3</th>
                                         <th md-column md-numeric>4</th>
                                         <th md-column md-numeric>5</th>
                                         <th md-column md-numeric>6</th>
@@ -100,7 +100,7 @@
                                         <td md-cell>{{timesheet.name}}</td>
                                         <td md-cell>{{timesheet.day1}}</td>
                                         <td md-cell>{{timesheet.day2}}</td>
-                                        <td md-cell>{{timesheet.day3}}</td>
+                                        <td md-cell ng-click="editTimesheet($event, timesheet)">{{timesheet.day3}}</td>
                                         <td md-cell>{{timesheet.day4}}</td>
                                         <td md-cell>{{timesheet.day5}}</td>
                                         <td md-cell>{{timesheet.day6}}</td>
