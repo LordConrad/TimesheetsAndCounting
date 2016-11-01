@@ -27,10 +27,8 @@
             $scope.editTimesheet = function(event, person) {
                 var promise = $mdEditDialog.show({
                     targetEvent: event,
-                    modelValue: person.day3,
-                    save: function(input) {
-                        person.day3 = input.$modelValue;
-                    }
+                    controller: 'timesheetOptionsController',
+                    
                 });
 
                 promise.then(function(ctrl) {

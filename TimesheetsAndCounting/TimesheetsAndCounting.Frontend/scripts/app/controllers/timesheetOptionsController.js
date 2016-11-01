@@ -16,6 +16,18 @@
                 $element.remove();
             };
 
+            this.getInput = function() {
+                return $scope.editDialog.input;
+            }
+
+            $scope.dismiss = this.dismiss;
+
+            $scope.submit = function() {
+                update().then(function() {
+                    $scope.dismiss();
+                });
+            }
+
         }
     ]);
 })();
